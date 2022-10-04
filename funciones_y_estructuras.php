@@ -100,5 +100,36 @@ echo "EJERCICIO 1"."<br>";
      }
      isBitten()."<br>";
 
+     echo "NIVEL 2 EJERCICIO 1.<BR>";
+     /*Nos han pedido un listado de cada año donde se produjeron juegos olímpicos desde 1960 incluido hasta 2016. 
+     Programa un bucle que calcule y muestre por pantalla los años olímpicos dentro de dicho intervalo.*/
+     function years(){
+        for ($i=1960; $i <=2016 ; $i+=4) { 
+        echo "Año $i"."<br>";
+        }
+        return;
+     }
+     years();
+     
+     echo"NIVEL 2 EJERCICIO 2.<BR>";
+     /*Escribe una función que determine la cantidad total a pagar por una llamada telefónica según las siguientes premisas:
 
+     Toda llamada que dure menos de 3 minutos tiene un coste de 10 céntimos.
+     Cada minuto adicional a partir de los 3 primeros es un paso de contador y cuesta 5 céntimos.*/
+     $minutoRegla= rand(1,3);
+     $minuto=rand(3,100);
+     function lowcost ($minutoRegla){
+        for ($i=1; $i <= $minutoRegla; $i++) { 
+            $total= $i * 0.10;
+        }
+        return $total;
+     }
+     function minutoAdicional($minuto){
+        for ($i=3; $i <= $minuto; $i++) { 
+            $total= $i * 0.05;
+        }
+        return $total;
+     }
+     echo "El total a pagar por $minuto minutos es ".lowcost($minutoRegla)."<br>";
+     echo "El total a pagar por $minutoAdicional minutos es ".minutoAdicional($minutoAdicional);
 ?>
