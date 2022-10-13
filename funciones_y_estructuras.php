@@ -12,9 +12,9 @@ echo "EJERCICIO 1"."<br>";
 
     echo "EJERCICIO 2"."<BR>";
     function conteo(){
-    $escondrijo = array(1,2,3,4,5,6,7,8,9,10);
-    for($i = 1; $i < count($escondrijo); $i++) {
-        echo $escondrijo[$i++].'<br />';
+    
+    for($i = 0; $i <= 10; $i+=2) {
+        echo $i.'<br />';
     }
     }
     conteo();
@@ -23,8 +23,8 @@ echo "EJERCICIO 1"."<br>";
      /*Imagínate que queremos que cuente hasta un número diferente de 10. 
      Programa la función para que el final de la cuenta esté parametrizado.*/
      function conteoAleatorio(){
-     $n =rand(1,20);
-     for($i = 1; $i <= $n; $i++) {
+     
+         for($i = 1; $i <= $n =rand(1,20); $i++) {
         echo $i.'<br />';
      }
     }conteoAleatorio();
@@ -57,20 +57,17 @@ echo "EJERCICIO 1"."<br>";
    
     $nota =rand(0,100);
     function notas($nota){
-        
-        switch ($nota) {
-            case ($nota >= 60)&& ($nota <=100):
-                echo "Primera division". "<br>";
-                break;
-            case ($nota < 60)&& ($nota >= 45):
-                echo "Segunda division". "<br>";
-                 break;
-            case ($nota < 45)&& ($nota >= 33):
-                echo "Tercera division". "<br>";
-                break;
-            case ($nota < 33)&& ($nota >= 0):
-                echo "El estudiante reprobara division". "<br>";
-                break;
+        if ($nota >= 60){
+            echo "Primera division". "<br>";
+        }
+        else if ($nota >= 45){
+            echo "Segunda division". "<br>";
+        }
+        else if ($nota >= 33){
+            echo "Tercera division". "<br>";
+        }else {
+            echo "El estudiante reprobara division". "<br>";
+
         }
     }
     echo "La nota obtenida es $nota" ."<br>";
@@ -116,10 +113,10 @@ echo "EJERCICIO 1"."<br>";
 
      Toda llamada que dure menos de 3 minutos tiene un coste de 10 céntimos.
      Cada minuto adicional a partir de los 3 primeros es un paso de contador y cuesta 5 céntimos.*/
-     $minutoRegla= rand(1,3);
+     $minutoRegla= rand(0,3);
      $minuto=rand(3,100);
      function lowcost ($minutoRegla){
-        for ($i=1; $i <= $minutoRegla; $i++) { 
+         for ($i=1; $i <= $minutoRegla; $i++) { 
             $total= $i * 0.10;
         }
         return $total;
