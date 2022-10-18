@@ -22,9 +22,9 @@ echo "EJERCICIO 1"."<br>";
      echo "EJERCICIO 3"."<BR>";
      /*Imagínate que queremos que cuente hasta un número diferente de 10. 
      Programa la función para que el final de la cuenta esté parametrizado.*/
-     function conteoAleatorio(){
+     function conteoAleatorio($n =rand(1,20)){
      
-         for($i = 1; $i <= $n =rand(1,20); $i++) {
+         for($i = 1; $i <= $n; $i++) {
         echo $i.'<br />';
      }
     }conteoAleatorio();
@@ -113,20 +113,20 @@ echo "EJERCICIO 1"."<br>";
 
      Toda llamada que dure menos de 3 minutos tiene un coste de 10 céntimos.
      Cada minuto adicional a partir de los 3 primeros es un paso de contador y cuesta 5 céntimos.*/
-     $minutoRegla= rand(0,3);
-     $minuto=rand(3,100);
-     function lowcost ($minutoRegla){
-         for ($i=1; $i <= $minutoRegla; $i++) { 
-            $total= $i * 0.10;
+     
+     $minuto=rand(0,100);
+     function llamada ($minuto){
+        if ($minuto<=3) {
+            $costo=0.1;
+        } else {
+            for ($i=3; $i <= $minuto; $i++) { 
+                $costo= ($i * 0.05) +0.1;
         }
-        return $total;
-     }
-     function minutoAdicional($minuto){
-        for ($i=3; $i <= $minuto; $i++) { 
-            $total= $i * 0.05;
-        }
-        return $total;
-     }
-     echo "El total a pagar por $minuto minutos es ".lowcost($minutoRegla)."<br>";
-     echo "El total a pagar por $minutoAdicional minutos es ".minutoAdicional($minutoAdicional);
+    }return $costo;
+    }
+        
+        
+     
+     echo "El total a pagar por $minuto minutos es ".llamada($minuto)."<br>";
+     
 ?>
