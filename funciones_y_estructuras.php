@@ -22,12 +22,12 @@ echo "EJERCICIO 1"."<br>";
      echo "EJERCICIO 3"."<BR>";
      /*Imagínate que queremos que cuente hasta un número diferente de 10. 
      Programa la función para que el final de la cuenta esté parametrizado.*/
-     function conteoAleatorio($n =rand(1,20)){
+     function conteoAleatorio($n){
      
          for($i = 1; $i <= $n; $i++) {
         echo $i.'<br />';
      }
-    }conteoAleatorio();
+    }conteoAleatorio(17);
 
 
      echo "EJERCICIO 4";
